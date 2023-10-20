@@ -85,6 +85,10 @@ button:hover {
   margin: 1%;
 }
 
-img {
-  
+.tint {
+  background-image: url('../img/frog.png');
+  width: 80%;
+  height: 200px;
+  background-size: cover;
+  color: white;
 }
