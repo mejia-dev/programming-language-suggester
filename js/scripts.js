@@ -5,10 +5,11 @@ function getAnswers() {
   let answerC = (document.getElementById("questionC").value).length;
   let answerD = document.querySelector("input[name=questionD]:checked").value;
   let answerE = document.getElementById("questionE").value;
-  showResults(answerA,answerB,answerC,answerD,answerE);
+  showResults(answerA,answerB,answerC,answerE);
+  showFrogMessage(answerD);
 }
 
-function showResults(in1,in2,in3,in4,in5) {
+function showResults(in1,in2,in3,in4) {
   // in1 Greater than or equal to 3, you're destined for Ruby or Python
     // in2 include the letter "e" AND in3 is greater than 6, you're destined for Python
     // in2 include the letter "e" AND in3 is less than or equal to 6, you're destined for Ruby
@@ -18,31 +19,40 @@ function showResults(in1,in2,in3,in4,in5) {
     // in2 include the letter "e" AND in3 is greater than 4, you're destined for Rust
     // in2 include the letter "e" AND in3 is less than or equal to 4, you're destined for Ruby
     // in2 not include letter "e", you're destined for Ruby
-
-  // in4 and in5 are just extra data for the time being and will be an extra feature in the page later
+    // in4 changes the title color of the resultant programming language
   
   if (in1 >= 3) {
     if (in2.includes("e") && (in3 > 6)) { 
-      //Python!
-      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in5+"'>Python!</span>";
+      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in4+"'>Python!</span>";
+      document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+python' target='blank'>here</a> to search for resources online.";
     } else if (in2.includes("e") && (in3 <= 6)) {
-      //Ruby!
-      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in5+"'>Ruby!</span>";
+      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in4+"'>Ruby!</span>";
+      document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+ruby' target='blank'>here</a> to search for resources online.";
     } else {
-      //Ruby!
-      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in5+"'>Ruby!</span>";
+      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in4+"'>Ruby!</span>";
+      document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+ruby' target='blank'>here</a> to search for resources online.";
     }
   } else {
     if (in2.includes("e") && (in3 > 4)) { 
-      //Rust!
-      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in5+"'>Rust!</span>";
+      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in4+"'>Rust!</span>";
+      document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+rust' target='blank'>here</a> to search for resources online.";
     } else if (in2.includes("e") && (in3 <= 4)) {
-      //Ruby!
-      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in5+"'>Ruby!</span>";
+      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in4+"'>Ruby!</span>";
+      document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+ruby' target='blank'>here</a> to search for resources online.";
     } else {
-      //Ruby!
-      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in5+"'>Ruby!</span>";
+      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in4+"'>Ruby!</span>";
+      document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+ruby' target='blank'>here</a> to search for resources online.";
     }
+  }
+}
+
+function showFrogMessage(answer) {
+  if (answer === "yes") {
+    document.getElementById("frogMessage").innerText = "Frogs like you too 🐸";
+  } else if (answer === "no") {
+    // frogno
+  } else {
+    document.getElementById("frogMessage").innerText = "And it's okay, frogs are normally indifferent to humans as well.";
   }
 }
 
