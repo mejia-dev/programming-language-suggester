@@ -24,23 +24,24 @@ function showResults(in1,in2,in3,in4,in5) {
   if (in1 >= 3) {
     if (in2.includes("e") && (in3 > 6)) { 
       //Python!
-      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle>Python!</span>";
+      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in5+"'>Python!</span>";
     } else if (in2.includes("e") && (in3 <= 6)) {
       //Ruby!
-      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle>Ruby!</span>";
+      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in5+"'>Ruby!</span>";
     } else {
-      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle>Ruby!</span>";
+      //Ruby!
+      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in5+"'>Ruby!</span>";
     }
   } else {
     if (in2.includes("e") && (in3 > 4)) { 
       //CSharp!
-      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle>CSharp!</span>";
+      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in5+"'>CSharp!</span>";
     } else if (in2.includes("e") && (in3 <= 4)) {
       //Ruby!
-      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle>Ruby!</span>";
+      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in5+"'>Ruby!</span>";
     } else {
       //Ruby!
-      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle>Ruby!</span>";
+      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in5+"'>Ruby!</span>";
     }
   }
 }
