@@ -12,16 +12,6 @@ function getAnswers() {
 }
 
 function showResults(in1,in2,in3,in4) {
-  // in1 Greater than or equal to 3, you're destined for Ruby or Python
-    // in2 include the letter "e" AND in3 is greater than 6, you're destined for Python
-    // in2 include the letter "e" AND in3 is less than or equal to 6, you're destined for Ruby
-    // in2 not include letter "e", you're destined for Ruby
-
-  // in1 less than 3, you're destined for Ruby or Rust
-    // in2 include the letter "e" AND in3 is greater than 4, you're destined for Rust
-    // in2 include the letter "e" AND in3 is less than or equal to 4, you're destined for Ruby
-    // in2 not include letter "e", you're destined for Ruby
-    // in4 changes the title color of the resultant programming language
   
   if (in1 >= 3) {
     if (in2.includes("e") && (in3 > 6)) { 
