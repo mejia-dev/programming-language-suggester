@@ -10,13 +10,12 @@
 </head>
 
 <body>
-
+<div id=contentHolder>
   <div id="headerHolder">
     <h1>The Programming Language Suggester</h1>
     <p>This completely legitimate website will give you a suggestion of a programming language to learn based on various factors.<br> These seemingly random factors are run through a ridiculously complex algorithm sent back to the past from the year 2052 to generate the perfect result.</p>
-    <div onclick="toggleDarkMode()" id="darkModeToggle">Toggle Dark Mode?</div>
+    <div onclick="toggleDarkMode()" id="darkModeToggle">Toggle Dark Mode</div>
   </div>
-
   <div id="formHolder">
     <form id="questionInput">
       <label for="questionA">How many pizzas have you eaten in the last 4 weeks?</label>
@@ -44,13 +43,12 @@
     </form>
   </div>
 
-  <br><br><br>
-
   <div id="resultsHolder">
     <h2 id="resultHeader"></h2>
     <p id="resultText"></p>
     <p id="frogMessage"></p>
   </div>
+</div>
 </body>
 
 </html>

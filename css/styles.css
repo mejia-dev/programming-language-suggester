@@ -1,5 +1,5 @@
 body {
-  
+  background-color: black;
 }
 
 #darkModeToggle {
@@ -9,38 +9,48 @@ body {
   padding: 10px;
   border-style: ridge;
   border-radius: 20px;
-  /* box-shadow: 5px 5px black; */
 }
 
 #darkModeToggle:hover {
   border-style: inset;
 }
 
-body.darkMode{
+#contentHolder {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  box-sizing: border-box;
+  border-style: solid;
+  border-radius: 20px;
+  background-color: white;
+}
+
+#contentHolder.darkMode {
   background-color: #121212;
   color: white;
 }
 
 #headerHolder {
-  justify-content: center;
   text-align: center;
   margin: 1%;
   padding: 10px;
   box-sizing: border-box;
-  border-radius: 20px;
 }
 
 #formHolder {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 1%;
+  padding: 10px;
+  border-style: solid;
+  border-radius: 20px;
 }
 
 #resultsHolder {
   display: block;
   justify-content: center;
   text-align: center;
-  margin: 1%;
   box-sizing: border-box;
-  border-radius: 20px;
+  margin: 1%;
 }

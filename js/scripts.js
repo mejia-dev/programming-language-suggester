@@ -60,10 +60,12 @@ function showFrogMessage(answer) {
 
 function toggleDarkMode() {
   if (darkMode === false) {
-    document.querySelector("body").setAttribute("class","darkMode");
+    document.getElementById("contentHolder").setAttribute("class","darkMode");
+    document.getElementById("darkModeToggle").innerText = "Toggle Light Mode";
     darkMode = true;
   } else {
-    document.querySelector("body").removeAttribute("class","darkMode");
+    document.getElementById("contentHolder").removeAttribute("class","darkMode");
+    document.getElementById("darkModeToggle").innerText = "Toggle Dark Mode";
     darkMode = false;
   }
 }
