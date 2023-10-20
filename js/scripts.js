@@ -14,8 +14,8 @@ function showResults(in1,in2,in3,in4,in5) {
     // in2 include the letter "e" AND in3 is less than or equal to 6, you're destined for Ruby
     // in2 not include letter "e", you're destined for Ruby
 
-  // in1 less than 3, you're destined for Ruby or CSharp
-    // in2 include the letter "e" AND in3 is greater than 4, you're destined for CSharp
+  // in1 less than 3, you're destined for Ruby or Rust
+    // in2 include the letter "e" AND in3 is greater than 4, you're destined for Rust
     // in2 include the letter "e" AND in3 is less than or equal to 4, you're destined for Ruby
     // in2 not include letter "e", you're destined for Ruby
 
@@ -34,8 +34,8 @@ function showResults(in1,in2,in3,in4,in5) {
     }
   } else {
     if (in2.includes("e") && (in3 > 4)) { 
-      //CSharp!
-      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in5+"'>CSharp!</span>";
+      //Rust!
+      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in5+"'>Rust!</span>";
     } else if (in2.includes("e") && (in3 <= 4)) {
       //Ruby!
       document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in5+"'>Ruby!</span>";
