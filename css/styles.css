@@ -86,9 +86,10 @@ button:hover {
 }
 
 .tint {
+  background-color: black;
   background-image: url('../img/frog.png');
-  width: 80%;
+  /* box-shadow: 0 3000px rgba(204, 0, 255, 0.8) inset; */
+  width: 200px;
   height: 200px;
   background-size: cover;
-  color: white;
 }
