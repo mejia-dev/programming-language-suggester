@@ -50,7 +50,7 @@ function showFrogMessage(answer) {
   if (answer === "yes") {
     document.getElementById("frogMessage").innerText = "Frogs like you too 🐸";
   } else if (answer === "no") {
-    // frogno
+    document.getElementById("frogMessage").innerText = "";
   } else {
     document.getElementById("frogMessage").innerText = "And it's okay, frogs are normally indifferent to humans as well.";
   }
