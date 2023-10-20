@@ -1,3 +1,5 @@
+let darkMode = false;
+
 function getAnswers() {
   event.preventDefault();
   let answerA = parseInt(document.getElementById("questionA").value);
@@ -53,6 +55,16 @@ function showFrogMessage(answer) {
     document.getElementById("frogMessage").innerText = "";
   } else {
     document.getElementById("frogMessage").innerText = "And it's okay, frogs are normally indifferent to humans as well.";
+  }
+}
+
+function toggleDarkMode() {
+  if (darkMode === false) {
+    document.querySelector("body").setAttribute("class","darkMode");
+    darkMode = true;
+  } else {
+    document.querySelector("body").removeAttribute("class","darkMode");
+    darkMode = false;
   }
 }
 
