@@ -7,32 +7,31 @@ function getAnswers() {
   let answerC = (document.getElementById("questionC").value).length;
   let answerD = document.querySelector("input[name=questionD]:checked").value;
   let answerE = document.getElementById("questionE").value;
-  showResults(answerA,answerB,answerC,answerE);
+  showResults(answerA, answerB, answerC, answerE);
   showFrogMessage(answerD);
 }
 
-function showResults(in1,in2,in3,in4) {
-  
+function showResults(in1, in2, in3, in4) {
   if (in1 >= 3) {
-    if (in2.includes("e") && (in3 > 6)) { 
-      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in4+"'>Python!</span>";
+    if (in2.includes("e") && (in3 > 6)) {
+      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:" + in4 + "'>Python!</span>";
       document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+python' target='blank'>here</a> to search for resources online.";
     } else if (in2.includes("e") && (in3 <= 6)) {
-      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in4+"'>Ruby!</span>";
+      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:" + in4 + "'>Ruby!</span>";
       document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+ruby' target='blank'>here</a> to search for resources online.";
     } else {
-      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in4+"'>Ruby!</span>";
+      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:" + in4 + "'>Ruby!</span>";
       document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+ruby' target='blank'>here</a> to search for resources online.";
     }
   } else {
-    if (in2.includes("e") && (in3 > 4)) { 
-      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in4+"'>Rust!</span>";
+    if (in2.includes("e") && (in3 > 4)) {
+      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:" + in4 + "'>Rust!</span>";
       document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+rust' target='blank'>here</a> to search for resources online.";
     } else if (in2.includes("e") && (in3 <= 4)) {
-      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in4+"'>Ruby!</span>";
+      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:" + in4 + "'>Ruby!</span>";
       document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+ruby' target='blank'>here</a> to search for resources online.";
     } else {
-      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:"+in4+"'>Ruby!</span>";
+      document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:" + in4 + "'>Ruby!</span>";
       document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+ruby' target='blank'>here</a> to search for resources online.";
     }
   }
@@ -50,18 +49,17 @@ function showFrogMessage(answer) {
 
 function toggleDarkMode() {
   if (darkMode === false) {
-    document.getElementById("contentHolder").setAttribute("class","darkMode");
+    document.getElementById("contentHolder").setAttribute("class", "darkMode");
     document.getElementById("darkModeToggle").innerText = "Toggle Light Mode";
     darkMode = true;
   } else {
-    document.getElementById("contentHolder").removeAttribute("class","darkMode");
+    document.getElementById("contentHolder").removeAttribute("class", "darkMode");
     document.getElementById("darkModeToggle").innerText = "Toggle Dark Mode";
     darkMode = false;
   }
 }
 
-// UI
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
   this.document.getElementById("questionInput").addEventListener("submit", getAnswers)
 })
 
