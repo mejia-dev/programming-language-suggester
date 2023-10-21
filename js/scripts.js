@@ -42,7 +42,11 @@ function showFrog(answer , color) {
   if (answer === "yes") {
     document.getElementById("frogMessage").innerText = "Frogs like you too 🐸";
   } else if (answer === "no") {
-    document.getElementById("frogMessage").innerText = "";
+    document.getElementById("frogMessage").innerText = "Would a frog in your favorite color change your opinion on frogs?";
+    let hexInput = color;
+    let redValue = parseInt(hexInput.substr(1, 2), 16)
+    let greenValue = parseInt(hexInput.substr(3, 2), 16)
+    let blueValue = text.substr(5, 2);
   } else {
     document.getElementById("frogMessage").innerText = "And it's okay, frogs are normally indifferent to humans as well.";
   }
