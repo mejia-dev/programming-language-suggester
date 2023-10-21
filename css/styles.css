@@ -85,3 +85,22 @@ button:hover {
   margin: 1%;
 }
 
+#frogImage {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+  background-image: url(../img/frog.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#frogOverlay {
+  width: 200px;
+  height: 200px;
+  background-image: url(../img/frog-blue.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+}
