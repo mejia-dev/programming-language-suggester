@@ -9,40 +9,40 @@ function getAnswers() {
   let answerD = document.querySelector("input[name=questionD]:checked").value;
   let answerE = document.getElementById("questionE").value;
   showResults(name, answerA, answerB, answerC, answerE);
-  showFrog(answerD , answerE);
+  showFrog(answerD, answerE);
 }
 
 function showResults(in0, in1, in2, in3, in4) {
   if (in1 >= 3) {
     if (in2.includes("e") && (in3 > 6)) {
       document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:" + in4 + "'>Python!</span>";
-      document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+python' target='blank'>here</a> to search for resources online, "+ in0 + ".";
+      document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+python' target='blank'>here</a> to search for resources online, " + in0 + ".";
     } else if (in2.includes("e") && (in3 <= 6)) {
       document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:" + in4 + "'>Ruby!</span>";
-      document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+ruby' target='blank'>here</a> to search for resources online, "+ in0 + ".";
+      document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+ruby' target='blank'>here</a> to search for resources online, " + in0 + ".";
     } else {
       document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:" + in4 + "'>Ruby!</span>";
-      document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+ruby' target='blank'>here</a> to search for resources online, "+ in0 + ".";
+      document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+ruby' target='blank'>here</a> to search for resources online, " + in0 + ".";
     }
   } else {
     if (in2.includes("e") && (in3 > 4)) {
       document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:" + in4 + "'>Rust!</span>";
-      document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+rust' target='blank'>here</a> to search for resources online, "+ in0 + ".";
+      document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+rust' target='blank'>here</a> to search for resources online, " + in0 + ".";
     } else if (in2.includes("e") && (in3 <= 4)) {
       document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:" + in4 + "'>Ruby!</span>";
-      document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+ruby' target='blank'>here</a> to search for resources online, "+ in0 + ".";
+      document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+ruby' target='blank'>here</a> to search for resources online, " + in0 + ".";
     } else {
       document.getElementById("resultHeader").innerHTML = "You got: <span id=resultHeaderTitle style='color:" + in4 + "'>Ruby!</span>";
-      document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+ruby' target='blank'>here</a> to search for resources online, "+ in0 + ".";
+      document.getElementById("resultText").innerHTML = "Click <a href='https://google.com/search?q=learn+how+to+code+in+ruby' target='blank'>here</a> to search for resources online, " + in0 + ".";
     }
   }
 }
 
-function showFrog(answer , color) {
+function showFrog(answer, color) {
   if (answer === "yes") {
     document.getElementById("frogMessage").innerText = "Frogs like you too 🐸";
     document.getElementById("frogImage").innerHTML = "";
-    document.getElementById("frogImage").setAttribute("class","hidden");
+    document.getElementById("frogImage").setAttribute("class", "hidden");
   } else if (answer === "no") {
     document.getElementById("frogMessage").innerText = "Would a frog in your favorite color change your opinion on frogs?";
     let hexInput = color;
@@ -62,7 +62,7 @@ function showFrog(answer , color) {
   } else {
     document.getElementById("frogMessage").innerText = "And it's okay, frogs are normally indifferent to humans as well.";
     document.getElementById("frogImage").innerHTML = "";
-    document.getElementById("frogImage").setAttribute("class","hidden");
+    document.getElementById("frogImage").setAttribute("class", "hidden");
   }
 }
 
@@ -70,10 +70,12 @@ function toggleDarkMode() {
   if (darkMode === false) {
     document.getElementById("contentHolder").setAttribute("class", "darkMode");
     document.getElementById("darkModeToggle").innerText = "Toggle Light Mode";
+    document.getElementById("frogOverlay").style.backgroundImage = "url(../img/frog-overlay-dark.png)";
     darkMode = true;
   } else {
     document.getElementById("contentHolder").removeAttribute("class", "darkMode");
     document.getElementById("darkModeToggle").innerText = "Toggle Dark Mode";
+    document.getElementById("frogOverlay").style.backgroundImage = "url(../img/frog-overlay.png)";
     darkMode = false;
   }
 }
@@ -81,6 +83,3 @@ function toggleDarkMode() {
 window.addEventListener("load", function () {
   this.document.getElementById("questionInput").addEventListener("submit", getAnswers)
 })
-
-
-
