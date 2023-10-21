@@ -41,8 +41,12 @@ function showResults(in0, in1, in2, in3, in4) {
 function showFrog(answer , color) {
   if (answer === "yes") {
     document.getElementById("frogMessage").innerText = "Frogs like you too 🐸";
+    document.getElementById("frogImage").innerHTML = "";
+    document.getElementById("frogImage").setAttribute("class","hidden");
+
   } else if (answer === "no") {
     document.getElementById("frogMessage").innerText = "Would a frog in your favorite color change your opinion on frogs?";
+    document.getElementById("frogImage").removeAttribute("class");
     let hexInput = color;
     let redValue = parseInt(hexInput.substr(1, 2), 16)
     let greenValue = parseInt(hexInput.substr(3, 2), 16)
@@ -52,6 +56,9 @@ function showFrog(answer , color) {
 
   } else {
     document.getElementById("frogMessage").innerText = "And it's okay, frogs are normally indifferent to humans as well.";
+    document.getElementById("frogImage").innerHTML = "";
+    document.getElementById("frogImage").setAttribute("class","hidden");
+
   }
 }
 
