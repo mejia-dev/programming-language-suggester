@@ -46,7 +46,10 @@ function showFrog(answer , color) {
     let hexInput = color;
     let redValue = parseInt(hexInput.substr(1, 2), 16)
     let greenValue = parseInt(hexInput.substr(3, 2), 16)
-    let blueValue = text.substr(5, 2);
+    let blueValue = parseInt(hexInput.substr(5, 2), 16);
+    let frogColorString = "<div id='frogOverlay' style='background-color: rgba(" + redValue + ", " + greenValue + ", " + blueValue + ", 0.4);'></div>";
+    document.getElementById("frogImage").innerHTML = frogColorString;
+
   } else {
     document.getElementById("frogMessage").innerText = "And it's okay, frogs are normally indifferent to humans as well.";
   }
