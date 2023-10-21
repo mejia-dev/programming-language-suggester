@@ -28,16 +28,17 @@ ELSE (pizza answer is less than 3)
 
 ## Setup/Installation Requirements
 Option A:
-* Navigate to https://mejia-dev.github.io/programming-language-suggester/ in your browser of choice
-
-Option B:
 * Clone this repository to your desktop (from the git console, run "git clone https://github.com/mejia-dev/programming-language-suggester.git" without quotes)
 * Navigate to the top level of the directory.
 * Open the index.html file in your browser of choice.
 
+Option B (not recommended due to known bug):
+* Navigate to https://mejia-dev.github.io/programming-language-suggester/ in your browser of choice
+
+
 ## Known Bugs
 
-* none
+* When viewing the site on GitHub Pages, the frog image color method doesn't work as expected. This appears to be due to the fact that GH Pages names the images directory differently ("Images" instead of "img"), which causes a 404 when looking for the overlay image in the relative path "../img/". Not sure if there is a recommended way to resolve this issue, so leaving this as-is for the time being.
 
 ## License
 
