@@ -43,22 +43,26 @@ function showFrog(answer , color) {
     document.getElementById("frogMessage").innerText = "Frogs like you too 🐸";
     document.getElementById("frogImage").innerHTML = "";
     document.getElementById("frogImage").setAttribute("class","hidden");
-
   } else if (answer === "no") {
     document.getElementById("frogMessage").innerText = "Would a frog in your favorite color change your opinion on frogs?";
-    document.getElementById("frogImage").removeAttribute("class");
     let hexInput = color;
     let redValue = parseInt(hexInput.substr(1, 2), 16)
     let greenValue = parseInt(hexInput.substr(3, 2), 16)
     let blueValue = parseInt(hexInput.substr(5, 2), 16);
-    let frogColorString = "<div id='frogOverlay' style='background-color: rgba(" + redValue + ", " + greenValue + ", " + blueValue + ", 0.4);'></div>";
+    let overlayTheme = "";
+    if (darkMode === false) {
+      overlayTheme = "../img/frog-overlay.png"
+    } else {
+      overlayTheme = "../img/frog-overlay-dark.png"
+    }
+    let frogColorString = "<div id='frogOverlay' style='background-color: rgba(" + redValue + ", " + greenValue + ", " + blueValue + ", 0.4); background-image: url(" + overlayTheme + ");'></div>";
+    document.getElementById("frogImage").removeAttribute("class");
     document.getElementById("frogImage").innerHTML = frogColorString;
 
   } else {
     document.getElementById("frogMessage").innerText = "And it's okay, frogs are normally indifferent to humans as well.";
     document.getElementById("frogImage").innerHTML = "";
     document.getElementById("frogImage").setAttribute("class","hidden");
-
   }
 }
 
