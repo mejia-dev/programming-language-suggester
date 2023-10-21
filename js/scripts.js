@@ -9,7 +9,7 @@ function getAnswers() {
   let answerD = document.querySelector("input[name=questionD]:checked").value;
   let answerE = document.getElementById("questionE").value;
   showResults(name, answerA, answerB, answerC, answerE);
-  showFrogMessage(answerD);
+  showFrog(answerD , answerE);
 }
 
 function showResults(in0, in1, in2, in3, in4) {
@@ -38,7 +38,7 @@ function showResults(in0, in1, in2, in3, in4) {
   }
 }
 
-function showFrogMessage(answer) {
+function showFrog(answer , color) {
   if (answer === "yes") {
     document.getElementById("frogMessage").innerText = "Frogs like you too 🐸";
   } else if (answer === "no") {
