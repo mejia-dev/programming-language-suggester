@@ -86,8 +86,11 @@ button:hover {
 }
 
 #frogImage {
+  display: block;
   width: 200px;
   height: 200px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 20px;
   background-image: url(../img/frog.png);
   background-position: center;
